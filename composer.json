@@ -1,0 +1,51 @@
+{
+    "name": "ramonluteijn/laravel-worldpay",
+    "description": "Laravel wrapper for the Access Worldpay Payments and APMs APIs - cards, Apple Pay, Google Pay and alternative payment methods, config-driven from .env.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["laravel", "worldpay", "payments", "apple pay", "google pay", "apm", "ideal", "psp"],
+    "authors": [
+        {
+            "name": "Ramon Luteijn"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^11.0|^12.0|^13.0",
+        "illuminate/http": "^11.0|^12.0|^13.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0|^10.0",
+        "pestphp/pest": "^2.0|^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "RamonLuteijn\\LaravelWorldpay\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "RamonLuteijn\\LaravelWorldpay\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "RamonLuteijn\\LaravelWorldpay\\WorldpayServiceProvider"
+            ],
+            "aliases": {
+                "Worldpay": "RamonLuteijn\\LaravelWorldpay\\Facades\\Worldpay"
+            }
+        }
+    },
+    "scripts": {
+        "test": "pest"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
